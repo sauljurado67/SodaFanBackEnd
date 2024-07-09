@@ -23,7 +23,7 @@ def create_user():
     # obtengo los datos enviados en formato json - convierte en un diccionario python
     if request.method == 'POST':
         data = request.json
-        new_user = UserFan(None, data['nombre'],
+        new_user = UserFan(None, data['nombre2'],
                            data['email'], data['password'])
         new_user.saveUser()
         response = {'message': 'Registro de tema creado con exito'}

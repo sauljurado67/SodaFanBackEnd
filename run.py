@@ -6,10 +6,9 @@ from flask_cors import CORS
 
 # inicializacion de la apliacion con Flask
 app = Flask(__name__)
-
-init_app(app)
 # permitir solicitudes desde cualquier origin
 CORS(app)
+init_app(app)
 
 # registrar una ruta asociada a una vista de temas
 app.route('/', methods=['GET'])(index)
